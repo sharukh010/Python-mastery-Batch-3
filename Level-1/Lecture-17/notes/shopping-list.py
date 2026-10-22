@@ -1,3 +1,4 @@
+from tabulate import tabulate 
 """
 Add element to list 
 Display all the items in the list 
@@ -9,7 +10,11 @@ exit
 shopping_list = [] 
 def add_item(item: dict[str])->None:
     shopping_list.append(item)
-
+def find_item(target: int)->dict[str]: 
+    for item in shopping_list: 
+        if item["id"] == target: 
+            return item 
+    return None 
 print("Shopping List:")
 options="""Options: 
 1) Add an item 
@@ -41,6 +46,22 @@ while True:
             print("ITEM ADDED SUCCESSFULLY")
         case 2: 
             print("Displaying Items: ")
-            print(shopping_list)
-
+            table = tabulate(shopping_list,headers="keys",tablefmt="grid")
+            print(table)
+        case 3: 
+            print("Item Details: ")
+            target = int(input("Enter an item ID: "))
+            item = find_item(target)
+            if item == None: 
+                print("Item not found")
+            else: 
+                table = tabulate([item],headers="keys",tablefmt="grid")
+                print(table)
+        case 4: 
+            print("Marking as Purchased: ")
+        case 5: 
+            print("Deleting an Item: ")
+        case 6: 
+            print("Exiting..")
+            break 
     print("#"*30)
