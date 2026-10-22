@@ -1,1 +1,12 @@
-
+## How to create Github Account and Repository 
+1. Go to github.com 
+2. sign up using google accounat 
+3. verify with you're parents googel account 
+4. on dashboard click on + symbol and choose new repository 
+5. name the repository as "Python-Mastery"
+## How to Create you're first file in Repository 
+1. Under Quick Setup you can find blue text that is written "create a new file" 
+click on it and click on file name and add "demo.txt" this is just a dummy file 
+cick on commit button which is in green colour you will get a pop up and click commit button 
+again 
+2. This will redirect you back to you're repository now click on code (green button on top of you're files)
