@@ -18,5 +18,10 @@ person["school"] = "XYZ school"
 # print(person.keys())
 # print(person.values())
 # acesssing each element using keys and loops 
-for key in person.keys(): 
-    print(person[key])
+# for key in person.keys(): 
+#     print(person[key])
+# accessing each element using loops without keys 
+# for value in person.values(): 
+#     print(value)
+# print(person["salary"])
+print(person.get("salary",0))
