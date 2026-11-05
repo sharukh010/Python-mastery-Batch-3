@@ -1,0 +1,2 @@
+1. While loop 
+2. Functions (prameters,retrun)
