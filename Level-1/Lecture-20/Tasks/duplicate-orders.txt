@@ -1,0 +1,28 @@
+Welcome to Python Restaurant!
+Available Menu: 
+1. Chicken Burger - $20
+2. Chicken Nuggets - $30
+3. Pizza - $25
+4. Mushroom Pizza - $35
+5. Coke - $10
+6. Smoothie - $23
+Order by entering the ids...
+Enter item IDs: 
+
+to: 
+Welcome to Python Restaurant!
+Available Menu: 
+1. Chicken Burger - $20
+2. Chicken Nuggets - $30
+3. Pizza - $25
+4. Mushroom Pizza - $35
+5. Coke - $10
+6. Smoothie - $23
+Order by entering the ids...
+Do you want to give duplicate orders? yes 
+Enter item IDSs: 
+
+duplicate order is Yes: 
+you will not delete duplicate orders 
+duplicate order is no : 
+you will delete the duplicate orders 
