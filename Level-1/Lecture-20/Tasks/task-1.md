@@ -114,6 +114,16 @@ Final Amount: Rs. 279
 3. If the customer enters an empty order, display an appropriate message.
 4. Display the bill only for validly selected items.
 
+### **8. Additional Tasks**
+1. Add a logic to take quantity of the order. 
+if there are duplicate orders ask the user if he wants duplicate order 
+```text
+ex: 
+Do you want to add Duplicate orders? Yes 
+Dont not use sets to remove the duplicated 
+```
+
+
 ### **Concepts to Practice**
 
 - Lists and nested lists
