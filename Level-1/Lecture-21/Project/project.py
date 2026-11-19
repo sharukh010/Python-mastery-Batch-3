@@ -3,22 +3,23 @@ students = [
         "id": 1,
         "name": "Alex",
         "age": 13,
-        "marks": 60
+        "marks": None 
     },
     {
         "id": 2, 
         "name": "Bob",
         "age": 14,
-        "marks": 75
+        "marks": None 
     },
     {
         "id": 3, 
         "name": "Charlie",
         "age": 15,
-        "marks": 80
+        "marks": None 
     }
 ] # no student in the dictionary 
 next_id = 4
+subjects = ("Math","Science","Computer Science","History")
 
 def add_student(student):
     students.append(student.copy()) 
@@ -71,12 +72,11 @@ while True:
             print("Student Registration: ")
             name = input("Name: ")
             age = int(input("Age: "))
-            marks = int(input("Marks: "))
             student = {
                 "id": next_id,
                 "name": name,
                 "age": age,
-                "marks": marks
+                "marks": None 
             }
             next_id += 1 
             add_student(student)
@@ -121,3 +121,38 @@ while True:
                 else: 
                     age = int(input("Student updated Age: "))
                     student["age"] = age 
+
+        case 5: 
+            print("Deleting a Student: ")
+            student_id = int(input("Student ID: "))
+            student = search_student(student_id=student_id)
+            if student is None: 
+                print("Student not found")
+            else: 
+                students.remove(student)
+                print("Student deleted Successfully")
+
+        case 6: 
+            print("Marks Assignment: ")
+            student_id = int(input("Student ID: "))
+            student = search_student(student_id=student_id)
+            if student is None: 
+                print("Student does not exists")
+            else: 
+                print("Enter the marks (0-100)")
+                count = 0
+                marks = dict.fromkeys(subjects,None) 
+                while count < len(subjects):  
+                    print(f"Subject: {subjects[count]}")
+                    score = int(input("Score: "))
+                    if score < 0 or score > 100: 
+                        print("Invalid marks. Please try again...")
+                        continue 
+                    else: 
+                        marks[subjects[count]] = score 
+                        count += 1 # moving to next subject
+                student["marks"] = marks.copy() 
+                print("Completed marks assignment")
+
+
+                    
